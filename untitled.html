@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perjalanan Romantis</title>
+    <style>
+        body {
+            font-family:arial , sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+        }
+        .question {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .hidden {
+            display: none;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="q1" class="question">
+        <h2>Apakah kamu cinta ke rifaaii?</h2>
+        <button onclick="showNext('q1', 'q2')">Ya</button>
+        <button onclick="showNext('q1', 'q2')">iya banget</button>
+    </div>
+
+    <div id="q2" class="question hidden">
+        <h2>Apa yang paling kamu sukai dari rifaiii?</h2>
+        <button onclick="showNext('q2', 'q3')">Senyumannya</button>
+        <button onclick="showNext('q2', 'q3')">Kepribadiannya</button>
+    </div>
+
+    <div id="q3" class="question hidden">
+        <h2>Di mana tempat paling romantis menurutmu?</h2>
+        <button onclick="showNext('q3', 'final')">opsional</button>
+        <button onclick="showNext('q3', 'final')">opsional</button>
+    </div>
+
+    <div id="final" class="question hidden">
+        <h2>Terima kasih telah menjawab semua pertanyaan!</h2>
+        <p>Cinta adalah perjalanan indah yang kita lalui bersama.</p>
+        <p>Setiap momen bersamamu adalah hadiah terindah.</p>
+        <p>❤️</p>
+    </div>
+
+    <script>
+        function showNext(current, next) {
+            document.getElementById(current).classList.add('hidden');
+            document.getElementById(next).classList.remove('hidden');
+        }
+    </script>
+    <a href="http://localhost:8158/untitled.html" style="color: blue;">cinta.com</a>
+</body>
+</html>
